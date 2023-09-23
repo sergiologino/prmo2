@@ -1,8 +1,8 @@
 <?php
 $hostname = "localhost"; // Адрес сервера MySQL
-$username = "ваш_пользователь"; // Имя пользователя MySQL
-$password = "ваш_пароль"; // Пароль MySQL
-$database = "ваша_база_данных"; // Название базы данных
+$username = "root"; // Имя пользователя MySQL
+$password = "admin"; // Пароль MySQL
+$database = "prmo2"; // Название базы данных
 $port     = 3306; //порт
 // Подключение к MySQL
 $conn = new mysqli($hostname, $username, $password, $database);
