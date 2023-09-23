@@ -28,25 +28,31 @@ main {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
+    display: block;
 }
-
+input-group {
+    float: left;
+    width: 50%;
+    display: inline-block;
+}
+input-button {
+    float: left;
+    width: 50%;
+}
 .login-form h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.login-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
-    width: 100%;
+    width: 50%;
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid #ddd;
     border-radius: 3px;
+    display: inline-block;
 }
 
 .login-form button {
@@ -118,13 +124,13 @@ main {
 }
 /* Стили для полей названия и данных prmo */
 .label-prmo {
-    display: inline-block; /* Элементы будут в одной строке */
+    display: block; /* Элементы будут в одной строке */
     width: 45%; /* Ширина поля названия */
     margin-right: 5%; /* Отступ между названием и данными prmo */
 }
 
 .input-prmo {
-    display: inline-block; /* Элементы будут в одной строке */
+    display: block; /* Элементы будут в одной строке */
     width: 45%; /* Ширина поля данных prmo */
 }
 /* Медиазапрос для адаптивного дизайна */

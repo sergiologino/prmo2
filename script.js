@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error('Ошибка при авторизации:', error));
     }
-});
     // Функция для загрузки групп и атрибутов с сервера
     function loadGroupsAndAttributes() {
         // Здесь отправьте запрос на сервер для получения групп и атрибутов
