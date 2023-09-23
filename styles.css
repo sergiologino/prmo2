@@ -1,0 +1,142 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для формы авторизации */
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.login-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.login-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Стили для формы ввода данных */
+.data-entry {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.data-entry h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.data-entry label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.data-entry input[type="date"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.data-entry button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+/* Стили для элементов формы */
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.attributes-container {
+    /* Стили для контейнера с атрибутами и группой */
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+/* Стили для полей названия и данных prmo */
+.label-prmo {
+    display: inline-block; /* Элементы будут в одной строке */
+    width: 45%; /* Ширина поля названия */
+    margin-right: 5%; /* Отступ между названием и данными prmo */
+}
+
+.input-prmo {
+    display: inline-block; /* Элементы будут в одной строке */
+    width: 45%; /* Ширина поля данных prmo */
+}
+/* Медиазапрос для адаптивного дизайна */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    .login-form,
+    .data-entry {
+        padding: 10px;
+    }
+
+    /* Дополнительные стили для мобильных устройств */
+}
