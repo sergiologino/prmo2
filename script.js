@@ -34,22 +34,22 @@ document.addEventListener("DOMContentLoaded", function () {
         // Отправьте данные на сервер для авторизации
         // Здесь вы можете использовать fetch() или другой метод
         // Пример:
-        // fetch('/api/login', {
-        //     method: 'POST',
-        //     body: JSON.stringify({ username, password }),
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }
-        // })
-        // .then(response => response.json())
-        // .then(data => {
-        //     if (data.success) {
-        //         // Авторизация успешна, выполните необходимые действия
-        //     } else {
-        //         // Ошибка авторизации, обработайте её
-        //     }
-        // })
-        // .catch(error => console.error('Ошибка при авторизации:', error));
+        fetch('/api/login', {
+            method: 'POST',
+            body: JSON.stringify({ username, password }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Авторизация успешна, выполните необходимые действия
+            } else {
+                // Ошибка авторизации, обработайте её
+            }
+        })
+        .catch(error => console.error('Ошибка при авторизации:', error));
     }
 });
     // Функция для загрузки групп и атрибутов с сервера
@@ -57,14 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
         // Здесь отправьте запрос на сервер для получения групп и атрибутов
         // и обновите содержимое groupAttributesDiv с полученными данными
         // Пример:
-        // fetch('/api/groups-and-attributes')
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         // Обновите содержимое groupAttributesDiv
-        //         // Например, создайте элементы для отображения групп и атрибутов
-        //         // и добавьте их в groupAttributesDiv
-        //     })
-        //     .catch(error => console.error('Ошибка при получении данных:', error));
+        fetch('/api/groups-and-attributes')
+            .then(response => response.json())
+            .then(data => {
+                // Обновите содержимое groupAttributesDiv
+                // Например, создайте элементы для отображения групп и атрибутов
+                // и добавьте их в groupAttributesDiv
+            })
+            .catch(error => console.error('Ошибка при получении данных:', error));
     }
 // Обработчик изменения даты
 document.getElementById("date").addEventListener("change", function () {
@@ -79,15 +79,15 @@ document.getElementById("date").addEventListener("change", function () {
 function loadPreviousData(selectedDate) {
     // Здесь отправьте запрос на сервер, чтобы получить ранее введенные данные
     // Пример:
-    // fetch(`/api/previous-data?date=${selectedDate}&department=${getSelectedDepartment()}&group=${getSelectedGroup()}`)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         // Обновите значения полей prmo1 и prmo2 с полученными данными
-    //         // Например, data.prmo1 и data.prmo2
-    //         document.getElementById("prmo1").value = data.prmo1;
-    //         document.getElementById("prmo2").value = data.prmo2;
-    //     })
-    //     .catch(error => console.error('Ошибка при получении ранее введенных данных:', error));
+    fetch(`/api/previous-data?date=${selectedDate}&department=${getSelectedDepartment()}&group=${getSelectedGroup()}`)
+        .then(response => response.json())
+        .then(data => {
+            // Обновите значения полей prmo1 и prmo2 с полученными данными
+            // Например, data.prmo1 и data.prmo2
+            document.getElementById("prmo1").value = data.prmo1;
+            document.getElementById("prmo2").value = data.prmo2;
+        })
+        .catch(error => console.error('Ошибка при получении ранее введенных данных:', error));
 }
 
 // Функция для получения текущей даты
