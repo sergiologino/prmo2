@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_test.css">
     <title>ПРМО</title>
 </head>
 <body>
@@ -15,21 +15,31 @@
             <h2>Авторизация</h2>
             <form id="loginForm">
                 <div class="input-group">
+                    <input type="text" id="username" name="username" required placeholder="пользователь">
                     
-                    <p><input type="text" id="username" name="username" required placeholder="Логин"></p>
-                    <p><input type="password" id="password" name="password" required placeholder="Пароль"></p>
-                </div>    
-                <div class="input-button">
-                    <button type="submit">Войти</button>
                 </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required placeholder="пароль">
+                    
+                </div>
+                <button type="submit">Войти</button>
             </form>
         </div>
         
         <div class="data-entry">
             <h2>Ввод данных</h2>
             <form id="dataForm">
-                <label for="date">Выберите дату:</label>
-                <input type="date" id="date" name="date" required>
+                <div class="input-group">
+                    <label for="date" class="label">Выберите дату:</label>
+                    <input type="date" id="date" name="date" class="input" required>
+                </div>
+        
+                <!-- Остальные поля ввода и группы здесь -->
+        
+                <button type="submit" class="button">Сохранить</button>
+            </form>
+        </div>
+        
         
                 <label for="department">Отдел:</label>
                 <select id="department" name="department" required>

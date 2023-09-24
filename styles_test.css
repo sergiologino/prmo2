@@ -12,7 +12,39 @@ header {
     text-align: center;
     padding: 1rem 0;
 }
+/* Стили для элементов формы */
+.login-form {
+    text-align: center; /* Выравнивание по центру */
+}
 
+.input-group {
+    display: inline-block; /* Элементы в одной строке */
+    margin-bottom: 20px 20px;
+}
+
+/* Скрыть заголовки по умолчанию */
+.input-group label {
+    display: none;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 10px solid #747070;
+    border-radius: 3px;
+    margin: 20px 20px 20px 20px;
+}
+
+/* Стили для кнопки */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5rem 1rem;
+    cursor: pointer;
+    margin-left: 50px;
+}
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -22,46 +54,25 @@ main {
 }
 
 /* Стили для формы авторизации */
-.login-form {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    display: block;
-    width: 100%;
-}
-input-group {
-    float: left;
-    width: 50%;
-}
-input-button {
-    float: left;
-    width: 50%;
-}
 .login-form h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-    width: 40%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    display: inline-block;
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-.login-form button {
+/* Стили для кнопки */
+button {
     background-color: #333;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
+
 
 /* Стили для формы ввода данных */
 .data-entry {
@@ -96,13 +107,11 @@ input-button {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
-/* Стили для элементов формы */
 .label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
-
 .input {
     width: 100%;
     padding: 0.5rem;
@@ -110,29 +119,19 @@ input-button {
     border: 1px solid #ddd;
     border-radius: 3px;
 }
-
-.attributes-container {
-    /* Стили для контейнера с атрибутами и группой */
-}
-
-.button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
 /* Стили для полей названия и данных prmo */
 .label-prmo {
-    display: block; /* Элементы будут в одной строке */
+    display: inline-block; /* Элементы будут в одной строке */
     width: 45%; /* Ширина поля названия */
     margin-right: 5%; /* Отступ между названием и данными prmo */
 }
 
 .input-prmo {
-    display: block; /* Элементы будут в одной строке */
+    display: inline-block; /* Элементы будут в одной строке */
     width: 45%; /* Ширина поля данных prmo */
 }
+
+
 /* Медиазапрос для адаптивного дизайна */
 @media (max-width: 600px) {
     main {
