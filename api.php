@@ -1,6 +1,6 @@
 <?php
 require_once("db_config.php");
-
+$array_no_tags = preg_grep("/<(\w+)>[^<>]+<\/\\1>/", $array, true);
 // Обработка запроса на авторизацию
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"];
@@ -39,7 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["date"]) && isset($_GET[
 
     // Здесь выполните запрос к базе данных, чтобы получить ранее введенные данные
     // Пример:
-    // $sql = "SELECT prmo1, prmo2 FROM your_table WHERE date = ? AND department = ? AND group = ?";
+    // $sql = "select u.login, u.full_name, d.name, i.name, iv.date_create , iv.value  
+    //        from item_value iv 
+    //        join department d on d.id =iv.department_id 
+    //        join item i on i.id =iv.item_id 
+    //        join `user` u on u.id =iv.user_id WHERE date = ? AND department = ? AND group = ?";
     // $stmt = $conn->prepare($sql);
     // $stmt->bind_param("sss", $date, $department, $group);
     // $stmt->execute();
